@@ -1,0 +1,331 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f29423;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+header nav {
+  float: right;
+}
+
+header nav a {
+  color: #fff;
+  margin-right: 10px;
+}
+/* PC */
+@media screen and (min-width: 771px) {
+  .container,
+  footer {
+    text-align: justify;
+    width: 56%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .equipe-div p {
+    margin: 50px 0;
+  }
+
+  .equipe-div {
+    margin: auto;
+    text-align: justify;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+  }
+
+  .equipe-div img {
+    height: 260px;
+    border-radius: 1rem;
+  }
+}
+
+/* tablets */
+@media screen and (min-width: 431px) and (max-width: 770px) {
+  .container,
+  footer {
+    text-align: justify;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .valores-div {
+    margin: auto;
+    text-align: justify;
+    width: 85%;
+  }
+  .equipe-div p {
+    margin: 24px 0;
+  }
+
+  .equipe-div {
+    margin: auto;
+    text-align: justify;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+
+  .equipe-div img {
+    height: 260px;
+    border-radius: 1rem;
+  }
+}
+
+/* celular */
+@media screen and (max-width: 430px) {
+  .container,
+  footer {
+    text-align: justify;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .equipe-div p {
+    margin: 10px 0;
+  }
+
+  .equipe-div {
+    margin: auto;
+    text-align: justify;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+  }
+
+  .equipe-div img {
+    height: 130px;
+    border-radius: 1rem;
+  }
+  .flip-card-back {
+    padding-top: 10px;
+    overflow: auto;
+  }
+
+  .flip-card {
+    width: 95px !important;
+    height: 125px !important;
+  }
+}
+
+.valores-div {
+  margin: auto;
+  text-align: justify;
+  width: 85%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bold-sub-titulo {
+  font-weight: bold;
+}
+
+.rigth-div,
+.left-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.valores-div h2,
+.equipe-div h2,
+.container h1,
+footer {
+  text-align: center;
+}
+
+/* CSS do flip card */
+.flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 250px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid coral;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(
+    120deg,
+    bisque 60%,
+    rgb(255, 231, 222) 88%,
+    rgb(255, 211, 195) 40%,
+    rgba(255, 127, 80, 0.603) 48%
+  );
+  color: coral;
+}
+
+.flip-card-back {
+  background: linear-gradient(
+    120deg,
+    rgb(255, 174, 145) 30%,
+    coral 88%,
+    bisque 40%,
+    rgb(255, 185, 160) 78%
+  );
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* CSS dos botões de entre em contato */
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.rigth-div h3,
+.left-div h3 {
+  border: 1px solid black;
+  padding: 15px 20px;
+}
+
+.rigth-div p,
+.left-div p {
+  margin: 5px;
+}
+
+.barra-horizontal {
+  height: 3px;
+  /* Altura da barra */
+  width: 100%;
+  background-color: #000;
+  /* Cor da barra */
+  margin: 20px 0;
+  /* Margem superior e inferior para espaçamento */
+}
+
+/* controle de imagem */
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/rosa_fundo.png");
+  background-repeat: repeat;
+  background-size: auto;
+  z-index: -101;
+  /* Garante que a imagem de fundo fique atrás de outros elementos */
+  opacity: 0.2;
+}
